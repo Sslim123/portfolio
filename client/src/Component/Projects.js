@@ -11,7 +11,7 @@ const Details = () => {
   return (
     <div id="projects">
       <button className="btn2"> <li>
-        <a href="Salem Alalem CV (10 Apr).pdf" download>
+        <a href="Salem Alalem cv(12).pdf" download>
         Hire Me
       </a>
         </li>

@@ -12,12 +12,11 @@ function Details() {
       <Carousel className="carousel-details">
         <Carousel.Item>
           <div className="carousel">
-            <img className=" "  src={Img2} alt="First slide" />
+            <img className=" " src={Img2} alt="First slide" />
             <div className="li-a">
               <p>TV Show App </p>
-              
-                <a href="https://slimslim.w3spaces.com/">visit website</a>
-            
+
+              <a href="https://slimslim.w3spaces.com/">visit website</a>
             </div>
           </div>
         </Carousel.Item>
@@ -27,9 +26,8 @@ function Details() {
 
             <div className="li-a">
               <p> Watch Video, Add </p>
-              
-                <a href="https://slimslim.w3spaces.com/">visit website</a>
-            
+
+              <a href="https://slimslim.w3spaces.com/">visit website</a>
             </div>
           </div>
         </Carousel.Item>
@@ -39,9 +37,8 @@ function Details() {
 
             <div className="li-a">
               <p>Hotel Booking </p>
-              
-                <a href="https://slimslim.w3spaces.com/">visit website</a>
-            
+
+              <a href="https://slimslim.w3spaces.com/">visit website</a>
             </div>
           </div>
         </Carousel.Item>

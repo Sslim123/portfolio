@@ -1,21 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import './i18next';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import  { Suspense } from 'react';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./i18next";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Suspense fallback="loading...">
-
-    <App />
-    </Suspense>
+   <App/>
   </React.StrictMode>
 );
 

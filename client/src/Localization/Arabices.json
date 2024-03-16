@@ -1,0 +1,30 @@
+[
+    {
+        "English": {
+            "title": "Salem",
+            "Home": "Home",
+            "Projects": "Projects",
+            "Contact": "Contact",
+            "About": "About"
+        },
+        "Arabic": {
+            "title": "سالم",
+            "Home": " الصفحه الريسيه ",
+            "Projects": "المشاريع",
+            "Contact": "التواصل",
+            "About": " تفاصيلي"
+        },
+        "Intro1": {
+            "iam": "Hello, Iam Salem Alalem",
+            "more": "more",
+            "roll": "A am full Stack web developer",
+            "pation": " Who cares about build websites that run across the platform & devices and new technologies " 
+        },
+        "Intro2": {
+            "iam": "مرحبا انا سالم العالم",
+            "more": "مزيد",
+            "roll": "أنا مطور ويب , واجهات اماميه و خلفيه",
+            "pation": "من يهتم ببناء مواقع الويب التي تعمل عبر النظام الأساسي & و تعمل علي مختلف الأجهزة والتقنيات الجديدة"
+        }
+    }
+]

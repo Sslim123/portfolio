@@ -1,42 +1,77 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import TransArabic from "../Localization/Arabices.json";
+import { useTranslation } from "react-i18next";
 
-function CollapsibleExample() {
+function Header() {
+  const { t, i18n } = useTranslation();
+  const languages = TransArabic.map((elem) => {
+    if (i18n.language === "en") {
+      return {
+        title: elem.English.title,
+        Home: elem.English.Home,
+        Projects: elem.English.Projects,
+        Contact: elem.English.Contact,
+        About: elem.English.About,
+        
+      };
+    } else if (i18n.language === "ar") {
+      return {
+        title: elem.Arabic.title,
+        Home: elem.Arabic.Home,
+        Projects: elem.Arabic.Projects,
+        Contact: elem.Arabic.Contact,
+        About: elem.Arabic.About,
+        
+
+
+      };
+    } else {
+      return elem;
+    }
+  });
+
   return (
-    // <div   style={{width: '100%', backgroundColor: 'green',
-    // position: 'fixed', top: '0'}}>
-
-    <Navbar collapseOnSelect expand="lg" bg='red'    className='nav-bar'>
-     
-      <Container>
-        <Navbar.Brand href="#home"><h3>Salem</h3></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            
-          
-          </Nav>
-          <Nav className='nav'>
-          <li>
-            <a href="/">Home</a>
-            </li>
-           <li>
-             <a href="#projects">Projects</a>
-            </li>
-            <li>
-
-            <a href="#form-contact">Contact</a>
-            </li>
-            <li>
-              <a href="#about">  About      </a>
-              </li>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    // </div>
+    <>
+      <Navbar collapseOnSelect expand="lg" className="nav-bar">
+        <Container>
+          <Navbar.Brand href="#home"></Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto"></Nav>
+            <Nav className="nav">
+              {languages.map((language) => (
+                <>
+                  <h3>{language.title}</h3>
+                  <a href="/" key={language.Home}>
+                    {t(language.Home)}
+                  </a>
+                  <a href="#projects">{(language.Projects)}</a>
+                  <a href="#form-contact">{(language.Contact)}</a>
+                  <a href="#about"> {(language.About)} </a>
+                </>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
+          <button
+            onClick={() => {
+              i18n.changeLanguage("ar");
+            }}
+          >
+            arabic
+          </button>
+          <button
+            onClick={() => {
+              i18n.changeLanguage("en");
+            }}
+          >
+            english
+          </button>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 
-export default CollapsibleExample;
+export default Header;
